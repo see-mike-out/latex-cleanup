@@ -4,7 +4,7 @@ Do you want to avoid adding your comments? Clean them up!
 
 ## Cautions
 
-Use at your own risk! I recommend using this when you submit your Latex source files rather than clean-up verison.
+Use at your own risk! It is not thoroughly tested. I recommend using this when you submit your Latex source files rather than clean-up version.
 
 If you fork this repo, any `*.tex` files are git-ignored.
 
