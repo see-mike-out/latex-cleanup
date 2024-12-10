@@ -4,7 +4,7 @@ const comment = "%";
 
 async function cleanup(config = {}) {
   let dir = config.dir_in,
-    out = config.dir_out,
+    out = config.dir_out ?? 'output',
     revision = config.revision,
     removal = config.removal,
     del_com = config.delete_comments ?? true;
