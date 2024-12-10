@@ -6,6 +6,8 @@ Do you want to avoid adding your comments? Clean them up!
 
 Use at your own risk! It is not thoroughly tested. I recommend using this when you submit your Latex source files rather than clean-up version.
 
+This script ignores any non-Latex files, so once files are generated, copy and paste them to the original directory. 
+
 If you fork this repo, any `*.tex` files are git-ignored.
 
 ## Requirement
