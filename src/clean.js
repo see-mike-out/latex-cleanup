@@ -15,7 +15,6 @@ async function cleanup(config = {}) {
     removal_command = (removal ? `\\${removal}` : null);
 
   let filepaths = await getDirectories(dir);
-  console.log(filepaths)
 
   for (const path of filepaths) {
     await cleanupSingle(path, dir, out, revision_command, removal_command, del_com);
@@ -42,7 +41,6 @@ async function getDirectories(dir) {
 async function cleanupSingle(path, dir, out, revision_command, removal_command, del_com) {
   let outpath = path.replace(new RegExp(`^${dir}/`), out + "/");
   let out_dir = outpath.split("/").slice(0, -1).join("/");
-  console.log(out_dir);
   let text = await fs.readFile(path, 'utf-8');
 
   // remove comments
@@ -172,7 +170,6 @@ async function cleanupSingle(path, dir, out, revision_command, removal_command, 
 
   try {
     await fs.mkdir(out_dir, { recursive: true });
-    console.log(`Directory created successfully: ${out_dir}`);
   } catch (err) {
     if (err.code !== 'EEXIST') { // Ignore error if directory already exists
       console.error(`Error creating directory: ${err}`);
